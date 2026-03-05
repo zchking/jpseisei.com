@@ -1,4 +1,4 @@
-name = "jpseisei-coming-soon"
+name = "jpseisei"
 main = "worker.js"
 compatibility_date = "2024-03-05"
 
