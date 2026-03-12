@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seisei Co., Ltd. | Integrity First, Value Creation</title>
+  <meta name="description" content="Seisei Co., Ltd. — Based in Osaka, Japan. Specialist in water quality measurement sensors and healthy water ionizers. Integrity First, Value Creation.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy:   #03045e;
+      --blue:   #0077b6;
+      --sky:    #0096c7;
+      --cyan:   #00b4d8;
+      --lcyan:  #48cae4;
+      --pale:   #ade8f4;
+      --light:  #caf0f8;
+      --white:  #ffffff;
+      --bg:     #f0f7fb;
+      --text:   #0d1b2a;
+      --muted:  #4e6a7a;
+      --border: #cfe4ee;
+      --fja:    'Noto Sans JP', sans-serif;
+      --fen:    'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fen); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+    header {
+      position: fixed; inset: 0 0 auto 0; z-index: 999;
+      height: 70px; padding: 0 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(3,4,94,0.96); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; color: #fff; }
+    .logo-img {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: #fff; padding: 4px; object-fit: contain; flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .logo-name  { font-size: 14px; font-weight: 700; line-height: 1.25; }
+    .logo-romaji{ font-size: 9px;  font-weight: 400; color: var(--pale); letter-spacing: 1px; }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 13px; transition: color .2s; }
+    nav a:hover { color: var(--cyan); }
+    .langs { display: flex; gap: 2px; background: rgba(255,255,255,0.08); border-radius: 24px; padding: 3px; }
+    .langs a {
+      padding: 4px 11px; border-radius: 20px; font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.6); text-decoration: none; transition: all .2s;
+    }
+    .langs a.on { background: var(--cyan); color: var(--navy); }
+    .langs a:hover:not(.on) { color: #fff; }
+
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #02034e 0%, #0077b6 55%, #00b4d8 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      padding: 110px 6% 80px;
+    }
+    .orb { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.04); animation: fl 10s ease-in-out infinite; }
+    .orb:nth-child(1){ width:680px;height:680px;top:-220px;right:-120px; }
+    .orb:nth-child(2){ width:320px;height:320px;bottom:60px;left:5%;animation-delay:-4s; }
+    .orb:nth-child(3){ width:140px;height:140px;top:38%;left:44%;background:rgba(0,180,216,.1);animation-delay:-7s; }
+    @keyframes fl { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-22px) scale(1.04)} }
+    .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; max-width: 580px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.35);
+      color: var(--lcyan); padding: 5px 14px; border-radius: 20px;
+      font-size: 10px; letter-spacing: 2.5px; font-weight: 700; margin-bottom: 26px; text-transform: uppercase;
+    }
+    .chip::before { content:''; width:6px;height:6px;border-radius:50%;background:var(--cyan); }
+    .hero-h1 {
+      font-size: clamp(42px, 6.5vw, 74px); font-weight: 900; color: #fff;
+      line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 14px;
+    }
+    .hero-h1 span { color: var(--lcyan); }
+    .tagline {
+      font-size: 16px; font-weight: 300; color: var(--pale);
+      letter-spacing: 3px; margin-bottom: 22px; font-family: var(--fja);
+    }
+    .hero-desc {
+      font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.9;
+      max-width: 480px; margin-bottom: 40px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: linear-gradient(135deg, var(--cyan), var(--sky));
+      color: #fff; padding: 14px 32px; border-radius: 32px;
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      box-shadow: 0 4px 24px rgba(0,180,216,0.45);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 34px rgba(0,180,216,0.55); }
+    .btn svg { transition: transform .25s; }
+    .btn:hover svg { transform: translateX(4px); }
+    .hero-photo {
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      width: 40%; z-index: 1;
+    }
+    .hero-photo img {
+      width: 100%; height: 460px; object-fit: cover;
+      border-radius: 20px; opacity: 0.65;
+      box-shadow: 0 28px 72px rgba(0,0,0,0.45);
+    }
+
+    section { padding: 96px 6%; }
+    .sec-label { font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--sky); font-weight: 700; margin-bottom: 10px; }
+    .sec-h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--navy); line-height: 1.12; margin-bottom: 16px; }
+    .sec-p { font-size: 15px; color: var(--muted); line-height: 1.9; max-width: 540px; margin-bottom: 56px; }
+
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-body > p { font-size: 15px; color: var(--muted); line-height: 1.9; }
+    .vals { margin-top: 36px; display: flex; flex-direction: column; gap: 18px; }
+    .val  { display: flex; gap: 15px; align-items: flex-start; }
+    .val-ico { width:46px;height:46px;min-width:46px;border-radius:12px;background:linear-gradient(135deg,var(--light),var(--pale));display:flex;align-items:center;justify-content:center;font-size:22px; }
+    .val-ttl { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .val-dsc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 210px 232px; gap: 10px; }
+    .mosaic img { width:100%;height:100%;object-fit:cover;border-radius:14px;transition:transform .35s; }
+    .mosaic img:first-child { grid-column: span 2; }
+    .mosaic img:hover { transform: scale(1.03); }
+
+    #products { background: var(--bg); }
+    .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .pcard { background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;box-shadow:0 2px 18px rgba(0,80,140,0.07); }
+    .pcard:hover { transform:translateY(-7px);box-shadow:0 16px 48px rgba(0,80,140,0.14); }
+    .pcard-img { height:238px;overflow:hidden;background:linear-gradient(135deg,#eaf4f8,#d5ecf5);display:flex;align-items:center;justify-content:center; }
+    .pcard-img img { max-width:84%;max-height:84%;object-fit:contain;padding:12px;transition:transform .4s; }
+    .pcard:hover .pcard-img img { transform: scale(1.07); }
+    .pcard-body { padding: 26px 28px; }
+    .pcard-brand { font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);font-weight:700;margin-bottom:4px; }
+    .pcard-model { font-size:22px;font-weight:900;color:var(--navy);margin-bottom:3px; }
+    .pcard-sub   { font-size:13px;color:var(--muted);margin-bottom:16px; }
+    .pcard-feats { list-style:none;display:flex;flex-direction:column;gap:7px; }
+    .pcard-feats li { font-size:13px;color:var(--text);padding-left:16px;position:relative;line-height:1.55; }
+    .pcard-feats li::before { content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--cyan); }
+
+    #partners { background: var(--white); text-align: center; }
+    #partners .sec-h2 { margin: 0 auto 16px; }
+    #partners .sec-p  { margin: 0 auto 56px; }
+    .partners-grid { display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:0 auto; }
+    .ptnr { border:1.5px solid var(--border);border-radius:20px;padding:42px 34px;text-align:left;transition:border-color .3s,box-shadow .3s,transform .3s; }
+    .ptnr:hover { border-color:var(--cyan);transform:translateY(-5px);box-shadow:0 10px 40px rgba(0,160,200,0.1); }
+    .ptnr-name { font-size:28px;font-weight:900;color:var(--navy);letter-spacing:-0.5px;margin-bottom:14px; }
+    .ptnr-name span { color: var(--sky); }
+    .ptnr-text { font-size:14px;color:var(--muted);line-height:1.78; }
+
+    #contact { background: linear-gradient(140deg, #02034e 0%, #0077b6 100%); }
+    #contact .sec-label { color: var(--pale); }
+    #contact .sec-h2   { color: var(--white); }
+    #contact .sec-p    { color: rgba(255,255,255,0.62); }
+    .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start; }
+    .cinfo { display:flex;flex-direction:column;gap:26px; }
+    .citem { display:flex;gap:16px;align-items:flex-start; }
+    .cico { width:46px;height:46px;min-width:46px;border-radius:12px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:20px; }
+    .clab { font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--pale);margin-bottom:5px; }
+    .cval { font-size:14px;color:var(--white);line-height:1.65; }
+    .cval a { color:var(--lcyan);text-decoration:none; }
+    .cval a:hover { text-decoration: underline; }
+    .cmap { border-radius:18px;overflow:hidden;height:320px;border:1px solid rgba(255,255,255,0.12); }
+    .cmap iframe { width:100%;height:100%;border:none;display:block; }
+
+    footer { background:#020340;color:rgba(255,255,255,0.42);padding:36px 6%;text-align:center; }
+    .ft-logo { font-size:16px;font-weight:800;color:#fff;margin-bottom:5px; }
+    .ft-tag  { font-size:12px;color:var(--pale);letter-spacing:2px;margin-bottom:16px;font-family:var(--fja); }
+    .ft-copy { font-size:11px; }
+
+    .rv { opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease; }
+    .rv.in { opacity:1;transform:none; }
+    .rv.d1 { transition-delay:.1s; } .rv.d2 { transition-delay:.2s; } .rv.d3 { transition-delay:.3s; }
+
+    @media (max-width: 920px) {
+      nav, .hero-photo { display: none; }
+      .about-grid, .products-grid, .partners-grid, .contact-grid { grid-template-columns: 1fr; }
+      section { padding: 72px 5%; }
+      .sec-p { max-width: 100%; }
+    }
+    @media (max-width: 480px) { header { padding: 0 4%; } section { padding: 60px 4%; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#hero">
+    <img src="images/logo.jpg" alt="精誠" class="logo-img">
+    <div>
+      <div class="logo-name">Seisei Co., Ltd.</div>
+      <div class="logo-romaji">精誠株式会社</div>
+    </div>
+  </a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#partners">Partners</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="langs">
+    <a href="index.html">日本語</a>
+    <a href="en.html" class="on">EN</a>
+    <a href="zh.html">中文</a>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="hero-content">
+    <div class="chip">OSAKA, JAPAN — EST. 2025</div>
+    <h1 class="hero-h1">Seisei<br><span>Co., Ltd.</span></h1>
+    <p class="tagline">Integrity First, Value Creation</p>
+    <p class="hero-desc">
+      Through innovative water quality measurement technology and healthy water solutions, we build on integrity to co-create new value with our customers.
+    </p>
+    <a href="#contact" class="btn">
+      Get in Touch
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="hero-photo">
+    <img src="images/company-1.jpg" alt="Seisei Co., Ltd.">
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid rv">
+    <div class="about-body">
+      <p class="sec-label">ABOUT US</p>
+      <h2 class="sec-h2">Integrity First,<br>Value Creation</h2>
+      <p>
+        Founded on the principle of "Integrity First, Value Creation," Seisei Co., Ltd. is committed to delivering high-quality products and services centered on our customers. Under the leadership of founder Wu Xiaocheng, the company has grown from its early stages to become an industry leader.<br><br>
+        We believe that partnerships built on trust are the foundation of long-term mutual success. We prioritize quality and integrity at every step, while continuously innovating to meet the evolving needs of our clients.
+      </p>
+      <div class="vals">
+        <div class="val">
+          <div class="val-ico">🤝</div>
+          <div>
+            <div class="val-ttl">Integrity</div>
+            <div class="val-dsc">We uphold honesty and transparency in all transactions and partnerships. Trust is the bedrock of lasting success.</div>
+          </div>
+        </div>
+        <div class="val">
+          <div class="val-ico">💡</div>
+          <div>
+            <div class="val-ttl">Innovation</div>
+            <div class="val-dsc">We continuously pursue technological advancement and service improvement to meet changing market demands.</div>
+          </div>
+        </div>
+        <div class="val">
+          <div class="val-ico">🌏</div>
+          <div>
+            <div class="val-ttl">Value Co-Creation</div>
+            <div class="val-dsc">We empower our customers' global competitiveness through long-term partnerships and meaningful social contribution.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mosaic rv d1">
+      <img src="images/company-2.jpg" alt="Seisei Co., Ltd. office">
+      <img src="images/company-3.jpg" alt="Seisei Co., Ltd.">
+      <img src="images/company-4.jpg" alt="Seisei Co., Ltd.">
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <p class="sec-label">OUR PRODUCTS</p>
+  <h2 class="sec-h2">Product Lineup</h2>
+  <p class="sec-p">We offer state-of-the-art water quality measurement sensors and healthy water ionizer systems.</p>
+  <div class="products-grid">
+
+    <div class="pcard rv">
+      <div class="pcard-img">
+        <img src="images/XT-500.jpg" alt="Pyxis XT-500">
+      </div>
+      <div class="pcard-body">
+        <p class="pcard-brand">Pyxis®</p>
+        <p class="pcard-model">XT-500</p>
+        <p class="pcard-sub">Self-Cleaning In-Line PTSA Sensor</p>
+        <ul class="pcard-feats">
+          <li>Self-cleaning function — low maintenance</li>
+          <li>High-precision detection at 1 ppb level</li>
+          <li>Color & turbidity compensation</li>
+          <li>4-20 mA / RS-485 communication</li>
+          <li>Easy smartphone calibration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pcard rv d1">
+      <div class="pcard-img">
+        <img src="images/ST-766.png" alt="Pyxis ST-766">
+      </div>
+      <div class="pcard-body">
+        <p class="pcard-brand">Pyxis®</p>
+        <p class="pcard-model">ST-766</p>
+        <p class="pcard-sub">Oxidizer + pH Multi-Sensor</p>
+        <ul class="pcard-feats">
+          <li>5-in-1: Oxidizer / pH / ORP / Conductivity / Temperature</li>
+          <li>Easy-swap replaceable sensor head</li>
+          <li>Multi-oxidant support (FCl, ClO₂, O₃, H₂O₂, SO₃)</li>
+          <li>4-20 mA / RS-485 & Bluetooth</li>
+          <li>Self-cleaning function</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pcard rv d2">
+      <div class="pcard-img">
+        <img src="images/ST-765SS.jpg" alt="Pyxis ST-765SS">
+      </div>
+      <div class="pcard-body">
+        <p class="pcard-brand">Pyxis®</p>
+        <p class="pcard-model">ST-765SS</p>
+        <p class="pcard-sub">pH + Oxidizer Multi-Function Sensor</p>
+        <ul class="pcard-feats">
+          <li>Simultaneous pH + oxidizer (free chlorine / ClO₂)</li>
+          <li>Rugged 304 stainless steel body</li>
+          <li>Replaceable electrodes — up to 2-year lifespan</li>
+          <li>4-20 mA analog / RS-485 Modbus output</li>
+          <li>Bluetooth wireless calibration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pcard rv d3">
+      <div class="pcard-img" style="background:linear-gradient(135deg,#e6f0f8,#d0e4f0)">
+        <img src="images/kangen-k8.jpg" alt="LeveLuk KANGEN8 K8">
+      </div>
+      <div class="pcard-body">
+        <p class="pcard-brand">Enagic® — Kangen Water®</p>
+        <p class="pcard-model">LeveLuk K8</p>
+        <p class="pcard-sub">Advanced Water Ionizer (KANGEN8)</p>
+        <ul class="pcard-feats">
+          <li>8 platinum-coated titanium plates</li>
+          <li>Enagic's most powerful water ionizer</li>
+          <li>High-yield antioxidant-rich water production</li>
+          <li>Multi-purpose: drinking, agriculture & beauty</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="partners">
+  <p class="sec-label">PARTNERS</p>
+  <h2 class="sec-h2" style="text-align:center">Strategic Partners</h2>
+  <p class="sec-p" style="text-align:center;margin-left:auto;margin-right:auto">
+    Through close collaboration with world-class international brands, we deliver innovative, high-quality products and solutions to our customers.
+  </p>
+  <div class="partners-grid">
+    <div class="ptnr rv">
+      <div class="ptnr-name">Pyxis<span>®</span></div>
+      <p class="ptnr-text">
+        Pyxis is a world leader in inline water quality measurement sensors. They offer high-precision sensors covering a wide range of water quality parameters, including PTSA tracer detection, oxidant measurement, and pH. As an authorized Pyxis distributor, Seisei delivers cutting-edge water quality management solutions to customers worldwide.
+      </p>
+    </div>
+    <div class="ptnr rv d1">
+      <div class="ptnr-name">Enagic<span>®</span></div>
+      <p class="ptnr-text">
+        Enagic is the pioneer of water electrolysis technology, globally recognized through its "Kangen Water®" brand. Providing medical-grade hydrogen-rich water ionizers, Enagic contributes to health and environmental well-being worldwide. Seisei is committed to spreading the benefits of Enagic products to more people.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="sec-label">GET IN TOUCH</p>
+  <h2 class="sec-h2">Contact Us</h2>
+  <p class="sec-p">Have questions about our products or partnerships? We'd love to hear from you.</p>
+  <div class="contact-grid">
+    <div class="cinfo rv">
+      <div class="citem">
+        <div class="cico">📍</div>
+        <div>
+          <div class="clab">ADDRESS</div>
+          <div class="cval">1-3-6 Shioji, Nishinari Ward,<br>Osaka 557-0052, Japan<br>大阪府大阪市西成区潮路1丁目3番6号 606室</div>
+        </div>
+      </div>
+      <div class="citem">
+        <div class="cico">📞</div>
+        <div>
+          <div class="clab">PHONE</div>
+          <div class="cval">
+            <a href="tel:+810809834-8296">+81 080-9834-8296</a> (Japan)<br>
+            <a href="tel:+8618652026158">+86 186-5202-6158</a> (China)
+          </div>
+        </div>
+      </div>
+      <div class="citem">
+        <div class="cico">✉️</div>
+        <div>
+          <div class="clab">EMAIL</div>
+          <div class="cval"><a href="mailto:wuwuxiaocheng36@gmail.com">wuwuxiaocheng36@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="citem">
+        <div class="cico">🌐</div>
+        <div>
+          <div class="clab">WEBSITE</div>
+          <div class="cval"><a href="https://jpseisei.com">jpseisei.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="cmap rv d1">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=135.487%2C34.638%2C135.500%2C34.649&amp;layer=mapnik&amp;marker=34.6435%2C135.4937"
+        title="Seisei Co., Ltd. Location" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-logo">Seisei Co., Ltd. | 精誠株式会社</div>
+  <div class="ft-tag">誠信為本　価値共創 — Integrity First, Value Creation</div>
+  <div class="ft-copy">&copy; 2026 Seisei Kabushiki Gaisha. All rights reserved.</div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

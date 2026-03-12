@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>精誠株式会社 | 誠信為本、価値共創</title>
-  <meta name="description" content="精誠株式会社 — 大阪を拠点に水質測定センサーと健康水生成機器を提供する専門商社。誠信為本、価値共創。">
+  <title>精誠株式会社 | 诚信为本，价值共创</title>
+  <meta name="description" content="精誠株式会社 — 总部位于日本大阪，专注于水质检测传感器与健康水电解设备的专业商社。诚信为本，价值共创。">
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -24,13 +24,12 @@
       --text:   #0d1b2a;
       --muted:  #4e6a7a;
       --border: #cfe4ee;
-      --fja:    'Noto Sans JP', sans-serif;
+      --fzh:    'Noto Sans SC', sans-serif;
       --fen:    'Inter', sans-serif;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: var(--fja); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+    body { font-family: var(--fzh); color: var(--text); line-height: 1.75; overflow-x: hidden; }
 
-    /* ─── HEADER ─── */
     header {
       position: fixed; inset: 0 0 auto 0; z-index: 999;
       height: 70px; padding: 0 6%;
@@ -45,7 +44,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
     .logo-name  { font-size: 14px; font-weight: 700; line-height: 1.25; }
-    .logo-romaji{ font-size: 9px;  font-weight: 300; color: var(--pale); letter-spacing: 1.2px; font-family: var(--fen); }
+    .logo-romaji{ font-size: 9px;  font-weight: 400; color: var(--pale); letter-spacing: 1px; font-family: var(--fen); }
     nav { display: flex; align-items: center; gap: 32px; }
     nav a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 13px; transition: color .2s; }
     nav a:hover { color: var(--cyan); }
@@ -58,7 +57,6 @@
     .langs a.on { background: var(--cyan); color: var(--navy); }
     .langs a:hover:not(.on) { color: #fff; }
 
-    /* ─── HERO ─── */
     #hero {
       min-height: 100vh;
       background: linear-gradient(135deg, #02034e 0%, #0077b6 55%, #00b4d8 100%);
@@ -66,18 +64,12 @@
       display: flex; align-items: center;
       padding: 110px 6% 80px;
     }
-    .orb {
-      position: absolute; border-radius: 50%;
-      background: rgba(255,255,255,0.04);
-      animation: fl 10s ease-in-out infinite;
-    }
+    .orb { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.04); animation: fl 10s ease-in-out infinite; }
     .orb:nth-child(1){ width:680px;height:680px;top:-220px;right:-120px; }
     .orb:nth-child(2){ width:320px;height:320px;bottom:60px;left:5%;animation-delay:-4s; }
     .orb:nth-child(3){ width:140px;height:140px;top:38%;left:44%;background:rgba(0,180,216,.1);animation-delay:-7s; }
     @keyframes fl { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-22px) scale(1.04)} }
-    .hero-wave {
-      position: absolute; bottom: -1px; left: 0; right: 0; pointer-events: none;
-    }
+    .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; pointer-events: none; }
     .hero-content { position: relative; z-index: 2; max-width: 580px; }
     .chip {
       display: inline-flex; align-items: center; gap: 7px;
@@ -88,8 +80,8 @@
     }
     .chip::before { content:''; width:6px;height:6px;border-radius:50%;background:var(--cyan); }
     .hero-h1 {
-      font-size: clamp(46px, 7.5vw, 82px); font-weight: 900; color: #fff;
-      line-height: 1.0; letter-spacing: -1.5px; margin-bottom: 14px;
+      font-size: clamp(44px, 7vw, 78px); font-weight: 900; color: #fff;
+      line-height: 1.05; letter-spacing: -1px; margin-bottom: 14px;
     }
     .hero-h1 span { color: var(--lcyan); }
     .tagline {
@@ -97,8 +89,8 @@
       letter-spacing: 4px; margin-bottom: 22px;
     }
     .hero-desc {
-      font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.9;
-      max-width: 460px; margin-bottom: 40px;
+      font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.9;
+      max-width: 480px; margin-bottom: 40px;
     }
     .btn {
       display: inline-flex; align-items: center; gap: 9px;
@@ -121,34 +113,17 @@
       box-shadow: 0 28px 72px rgba(0,0,0,0.45);
     }
 
-    /* ─── SECTION BASE ─── */
     section { padding: 96px 6%; }
-    .sec-label {
-      font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase;
-      color: var(--sky); font-weight: 700; font-family: var(--fen); margin-bottom: 10px;
-    }
-    .sec-h2 {
-      font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--navy);
-      line-height: 1.12; margin-bottom: 16px;
-    }
-    .sec-p {
-      font-size: 15px; color: var(--muted); line-height: 1.9;
-      max-width: 540px; margin-bottom: 56px;
-    }
+    .sec-label { font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--sky); font-weight: 700; font-family: var(--fen); margin-bottom: 10px; }
+    .sec-h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
+    .sec-p { font-size: 15px; color: var(--muted); line-height: 1.9; max-width: 540px; margin-bottom: 56px; }
 
-    /* ─── ABOUT ─── */
     #about { background: var(--white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-    .about-body > p {
-      font-size: 15px; color: var(--muted); line-height: 1.9; margin-bottom: 0;
-    }
+    .about-body > p { font-size: 15px; color: var(--muted); line-height: 1.9; }
     .vals { margin-top: 36px; display: flex; flex-direction: column; gap: 18px; }
     .val  { display: flex; gap: 15px; align-items: flex-start; }
-    .val-ico {
-      width: 46px; height: 46px; min-width: 46px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--light), var(--pale));
-      display: flex; align-items: center; justify-content: center; font-size: 22px;
-    }
+    .val-ico { width:46px;height:46px;min-width:46px;border-radius:12px;background:linear-gradient(135deg,var(--light),var(--pale));display:flex;align-items:center;justify-content:center;font-size:22px; }
     .val-ttl { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
     .val-dsc { font-size: 13px; color: var(--muted); line-height: 1.65; }
     .mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 210px 232px; gap: 10px; }
@@ -156,122 +131,66 @@
     .mosaic img:first-child { grid-column: span 2; }
     .mosaic img:hover { transform: scale(1.03); }
 
-    /* ─── PRODUCTS ─── */
     #products { background: var(--bg); }
     .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .pcard {
-      background: var(--white); border-radius: 18px; overflow: hidden;
-      border: 1px solid var(--border); transition: transform .3s, box-shadow .3s;
-      box-shadow: 0 2px 18px rgba(0,80,140,0.07);
-    }
-    .pcard:hover { transform: translateY(-7px); box-shadow: 0 16px 48px rgba(0,80,140,0.14); }
-    .pcard-img {
-      height: 238px; overflow: hidden;
-      background: linear-gradient(135deg, #eaf4f8, #d5ecf5);
-      display: flex; align-items: center; justify-content: center;
-    }
+    .pcard { background:var(--white);border-radius:18px;overflow:hidden;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;box-shadow:0 2px 18px rgba(0,80,140,0.07); }
+    .pcard:hover { transform:translateY(-7px);box-shadow:0 16px 48px rgba(0,80,140,0.14); }
+    .pcard-img { height:238px;overflow:hidden;background:linear-gradient(135deg,#eaf4f8,#d5ecf5);display:flex;align-items:center;justify-content:center; }
     .pcard-img img { max-width:84%;max-height:84%;object-fit:contain;padding:12px;transition:transform .4s; }
     .pcard:hover .pcard-img img { transform: scale(1.07); }
     .pcard-body { padding: 26px 28px; }
-    .pcard-brand {
-      font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--sky); font-weight: 700; font-family: var(--fen); margin-bottom: 4px;
-    }
-    .pcard-model {
-      font-size: 22px; font-weight: 900; color: var(--navy);
-      font-family: var(--fen); margin-bottom: 3px;
-    }
-    .pcard-sub  { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-    .pcard-feats { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-    .pcard-feats li {
-      font-size: 13px; color: var(--text); padding-left: 16px; position: relative; line-height: 1.55;
-    }
-    .pcard-feats li::before {
-      content:''; position:absolute; left:0; top:7px;
-      width:5px; height:5px; border-radius:50%; background:var(--cyan);
-    }
+    .pcard-brand { font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);font-weight:700;font-family:var(--fen);margin-bottom:4px; }
+    .pcard-model { font-size:22px;font-weight:900;color:var(--navy);font-family:var(--fen);margin-bottom:3px; }
+    .pcard-sub   { font-size:13px;color:var(--muted);margin-bottom:16px; }
+    .pcard-feats { list-style:none;display:flex;flex-direction:column;gap:7px; }
+    .pcard-feats li { font-size:13px;color:var(--text);padding-left:16px;position:relative;line-height:1.55; }
+    .pcard-feats li::before { content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--cyan); }
 
-    /* ─── PARTNERS ─── */
     #partners { background: var(--white); text-align: center; }
     #partners .sec-h2 { margin: 0 auto 16px; }
     #partners .sec-p  { margin: 0 auto 56px; }
-    .partners-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 860px; margin: 0 auto;
-    }
-    .ptnr {
-      border: 1.5px solid var(--border); border-radius: 20px;
-      padding: 42px 34px; text-align: left;
-      transition: border-color .3s, box-shadow .3s, transform .3s;
-    }
-    .ptnr:hover {
-      border-color: var(--cyan); transform: translateY(-5px);
-      box-shadow: 0 10px 40px rgba(0,160,200,0.1);
-    }
-    .ptnr-name {
-      font-size: 28px; font-weight: 900; color: var(--navy);
-      font-family: var(--fen); letter-spacing: -0.5px; margin-bottom: 14px;
-    }
+    .partners-grid { display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:0 auto; }
+    .ptnr { border:1.5px solid var(--border);border-radius:20px;padding:42px 34px;text-align:left;transition:border-color .3s,box-shadow .3s,transform .3s; }
+    .ptnr:hover { border-color:var(--cyan);transform:translateY(-5px);box-shadow:0 10px 40px rgba(0,160,200,0.1); }
+    .ptnr-name { font-size:28px;font-weight:900;color:var(--navy);font-family:var(--fen);letter-spacing:-0.5px;margin-bottom:14px; }
     .ptnr-name span { color: var(--sky); }
-    .ptnr-text { font-size: 14px; color: var(--muted); line-height: 1.78; }
+    .ptnr-text { font-size:14px;color:var(--muted);line-height:1.78; }
 
-    /* ─── CONTACT ─── */
-    #contact {
-      background: linear-gradient(140deg, #02034e 0%, #0077b6 100%);
-    }
+    #contact { background: linear-gradient(140deg, #02034e 0%, #0077b6 100%); }
     #contact .sec-label { color: var(--pale); }
     #contact .sec-h2   { color: var(--white); }
     #contact .sec-p    { color: rgba(255,255,255,0.62); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .cinfo { display: flex; flex-direction: column; gap: 26px; }
-    .citem { display: flex; gap: 16px; align-items: flex-start; }
-    .cico {
-      width: 46px; height: 46px; min-width: 46px; border-radius: 12px;
-      background: rgba(255,255,255,0.1);
-      display: flex; align-items: center; justify-content: center; font-size: 20px;
-    }
-    .clab {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--pale); font-family: var(--fen); margin-bottom: 5px;
-    }
-    .cval { font-size: 14px; color: var(--white); line-height: 1.65; }
-    .cval a { color: var(--lcyan); text-decoration: none; }
+    .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start; }
+    .cinfo { display:flex;flex-direction:column;gap:26px; }
+    .citem { display:flex;gap:16px;align-items:flex-start; }
+    .cico { width:46px;height:46px;min-width:46px;border-radius:12px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:20px; }
+    .clab { font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--pale);font-family:var(--fen);margin-bottom:5px; }
+    .cval { font-size:14px;color:var(--white);line-height:1.65; }
+    .cval a { color:var(--lcyan);text-decoration:none; }
     .cval a:hover { text-decoration: underline; }
-    .cmap {
-      border-radius: 18px; overflow: hidden; height: 320px;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
+    .cmap { border-radius:18px;overflow:hidden;height:320px;border:1px solid rgba(255,255,255,0.12); }
     .cmap iframe { width:100%;height:100%;border:none;display:block; }
 
-    /* ─── FOOTER ─── */
-    footer {
-      background: #020340; color: rgba(255,255,255,0.42);
-      padding: 36px 6%; text-align: center;
-    }
-    .ft-logo { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 5px; }
-    .ft-tag  { font-size: 12px; color: var(--pale); letter-spacing: 2px; margin-bottom: 16px; }
-    .ft-copy { font-size: 11px; font-family: var(--fen); }
+    footer { background:#020340;color:rgba(255,255,255,0.42);padding:36px 6%;text-align:center; }
+    .ft-logo { font-size:16px;font-weight:800;color:#fff;margin-bottom:5px; }
+    .ft-tag  { font-size:12px;color:var(--pale);letter-spacing:2px;margin-bottom:16px; }
+    .ft-copy { font-size:11px;font-family:var(--fen); }
 
-    /* ─── REVEAL ─── */
-    .rv { opacity:0; transform:translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-    .rv.in { opacity:1; transform:none; }
+    .rv { opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease; }
+    .rv.in { opacity:1;transform:none; }
     .rv.d1 { transition-delay:.1s; } .rv.d2 { transition-delay:.2s; } .rv.d3 { transition-delay:.3s; }
 
-    /* ─── RESPONSIVE ─── */
     @media (max-width: 920px) {
       nav, .hero-photo { display: none; }
       .about-grid, .products-grid, .partners-grid, .contact-grid { grid-template-columns: 1fr; }
       section { padding: 72px 5%; }
       .sec-p { max-width: 100%; }
     }
-    @media (max-width: 480px) {
-      header { padding: 0 4%; }
-      section { padding: 60px 4%; }
-    }
+    @media (max-width: 480px) { header { padding: 0 4%; } section { padding: 60px 4%; } }
   </style>
 </head>
 <body>
 
-<!-- ─── HEADER ─── -->
 <header>
   <a class="logo" href="#hero">
     <img src="images/logo.jpg" alt="精誠" class="logo-img">
@@ -281,19 +200,18 @@
     </div>
   </a>
   <nav>
-    <a href="#about">会社概要</a>
-    <a href="#products">製品</a>
-    <a href="#partners">パートナー</a>
-    <a href="#contact">お問い合わせ</a>
+    <a href="#about">关于我们</a>
+    <a href="#products">产品</a>
+    <a href="#partners">合作伙伴</a>
+    <a href="#contact">联系我们</a>
   </nav>
   <div class="langs">
-    <a href="index.html" class="on">日本語</a>
+    <a href="index.html">日本語</a>
     <a href="en.html">EN</a>
-    <a href="zh.html">中文</a>
+    <a href="zh.html" class="on">中文</a>
   </div>
 </header>
 
-<!-- ─── HERO ─── -->
 <section id="hero">
   <div class="orb"></div>
   <div class="orb"></div>
@@ -301,12 +219,12 @@
   <div class="hero-content">
     <div class="chip">OSAKA, JAPAN — EST. 2025</div>
     <h1 class="hero-h1">精誠<br><span>株式会社</span></h1>
-    <p class="tagline">誠信為本　価値共創</p>
+    <p class="tagline">诚信为本　价值共创</p>
     <p class="hero-desc">
-      革新的な水質測定技術と健康水生成ソリューションを通じて、誠実さを礎に、お客様とともに新たな価値を創造します。
+      以创新的水质检测技术与健康水电解解决方案为基础，以诚信为根，与客户携手共创新价值。
     </p>
     <a href="#contact" class="btn">
-      お問い合わせ
+      联系我们
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -320,53 +238,51 @@
   </div>
 </section>
 
-<!-- ─── ABOUT ─── -->
 <section id="about">
   <div class="about-grid rv">
     <div class="about-body">
       <p class="sec-label">ABOUT US</p>
-      <h2 class="sec-h2">誠信為本<br>価値共創</h2>
+      <h2 class="sec-h2">诚信为本<br>价值共创</h2>
       <p>
-        精誠株式会社は、「誠信為本、価値共創」の理念のもと、お客様を中心に据えた高品質なサービスと製品を提供し続けています。創業者・呉 暁晟（ゴ ギョウセイ）氏の深い業界経験と先見性に導かれ、設立以来、業界のリーダーへと成長してきました。<br><br>
-        信頼を礎にした協力関係こそが長期的な共栄への道であると確信し、あらゆる業務プロセスにおいて品質と誠実さを最優先としています。
+        精誠株式会社自成立以来，始终秉持"诚信为本，价值共创"的核心理念，以客户为中心，致力于提供高品质的服务和产品。公司创始人吴晓铖先生凭借深厚的行业经验和远见卓识，带领公司从起步阶段迅速成长为业界领先者。<br><br>
+        我们坚信，只有建立在信任基础上的合作才能实现长期共赢。因此，我们在每一个业务环节中严格把关，确保产品质量和服务水准始终达到最高标准。
       </p>
       <div class="vals">
         <div class="val">
           <div class="val-ico">🤝</div>
           <div>
-            <div class="val-ttl">誠信（誠実さ）</div>
-            <div class="val-dsc">すべての取引・協力関係において、誠実さと透明性を貫きます。信頼のある関係こそが長期的な成功の基盤です。</div>
+            <div class="val-ttl">诚信</div>
+            <div class="val-dsc">在所有交易与合作关系中，我们始终坚守诚实与透明的原则。信任是长期成功的基石。</div>
           </div>
         </div>
         <div class="val">
           <div class="val-ico">💡</div>
           <div>
-            <div class="val-ttl">革新（イノベーション）</div>
-            <div class="val-dsc">変化する市場のニーズに応えるため、技術革新と継続的な改善を追求し続けます。</div>
+            <div class="val-ttl">创新</div>
+            <div class="val-dsc">为满足不断变化的市场需求，我们持续追求技术进步与服务优化，勇于挑战，开拓进取。</div>
           </div>
         </div>
         <div class="val">
           <div class="val-ico">🌏</div>
           <div>
-            <div class="val-ttl">価値共創</div>
-            <div class="val-dsc">お客様のグローバルな競争力強化を支援し、長期的なパートナーシップを通じて社会に貢献します。</div>
+            <div class="val-ttl">价值共创</div>
+            <div class="val-dsc">我们致力于提升客户的全球竞争力，通过长期合作伙伴关系，为社会创造更大价值。</div>
           </div>
         </div>
       </div>
     </div>
     <div class="mosaic rv d1">
-      <img src="images/company-2.jpg" alt="精誠株式会社 オフィス">
+      <img src="images/company-2.jpg" alt="精誠株式会社">
       <img src="images/company-3.jpg" alt="精誠株式会社">
       <img src="images/company-4.jpg" alt="精誠株式会社">
     </div>
   </div>
 </section>
 
-<!-- ─── PRODUCTS ─── -->
 <section id="products">
   <p class="sec-label">OUR PRODUCTS</p>
-  <h2 class="sec-h2">取扱製品</h2>
-  <p class="sec-p">最先端の水質測定センサーおよび健康水生成機器を取り扱っております。</p>
+  <h2 class="sec-h2">产品系列</h2>
+  <p class="sec-p">我们提供尖端水质检测传感器与高性能水电解健康水机，满足工业与生活的多元需求。</p>
   <div class="products-grid">
 
     <div class="pcard rv">
@@ -376,13 +292,13 @@
       <div class="pcard-body">
         <p class="pcard-brand">Pyxis®</p>
         <p class="pcard-model">XT-500</p>
-        <p class="pcard-sub">自己洗浄式インライン PTSA センサー</p>
+        <p class="pcard-sub">自清洁内联 PTSA 传感器</p>
         <ul class="pcard-feats">
-          <li>自己洗浄機能搭載（低メンテナンス）</li>
-          <li>高精度検出：1ppb レベル</li>
-          <li>色度・濁度補正機能</li>
-          <li>4-20mA / RS-485 通信対応</li>
-          <li>スマートフォンによる簡単校正</li>
+          <li>自清洁功能，低维护成本</li>
+          <li>高精度检测：1ppb 级别</li>
+          <li>色度与浊度补偿功能</li>
+          <li>支持 4-20mA / RS-485 通信</li>
+          <li>手机 App 便捷校准</li>
         </ul>
       </div>
     </div>
@@ -394,13 +310,13 @@
       <div class="pcard-body">
         <p class="pcard-brand">Pyxis®</p>
         <p class="pcard-model">ST-766</p>
-        <p class="pcard-sub">酸化剤 + pH 複合センサー</p>
+        <p class="pcard-sub">氧化剂 + pH 复合传感器</p>
         <ul class="pcard-feats">
-          <li>5in1 マルチ測定（酸化剤 / pH / ORP / 導電率 / 温度）</li>
-          <li>交換しやすいセンサーヘッド設計</li>
-          <li>多様な酸化剤に対応（FCI・CIO₂・O₃・H₂O₂・SO₃）</li>
-          <li>4-20mA / RS-485 & Bluetooth 対応</li>
-          <li>自己洗浄機能搭載</li>
+          <li>5合1多参数测量（氧化剂 / pH / ORP / 导电率 / 温度）</li>
+          <li>可更换传感器头，维护方便</li>
+          <li>支持多种氧化剂（FCI、ClO₂、O₃、H₂O₂、SO₃）</li>
+          <li>支持 4-20mA / RS-485 及蓝牙</li>
+          <li>内置自清洁功能</li>
         </ul>
       </div>
     </div>
@@ -412,30 +328,30 @@
       <div class="pcard-body">
         <p class="pcard-brand">Pyxis®</p>
         <p class="pcard-model">ST-765SS</p>
-        <p class="pcard-sub">pH + 酸化剤 多機能センサー</p>
+        <p class="pcard-sub">pH + 氧化剂多功能传感器</p>
         <ul class="pcard-feats">
-          <li>pH と酸化剤（遊離塩素・二酸化塩素）を同時測定</li>
-          <li>304 ステンレス鋼採用の堅牢設計</li>
-          <li>交換可能な電極（最長 2 年の長寿命）</li>
-          <li>4-20mA アナログ / RS-485 Modbus 対応</li>
-          <li>Bluetooth によるワイヤレス校正</li>
+          <li>同步测量 pH 与氧化剂（游离氯 / 二氧化氯）</li>
+          <li>304 不锈钢坚固外壳</li>
+          <li>电极可更换，寿命最长 2 年</li>
+          <li>4-20mA / RS-485 Modbus 输出</li>
+          <li>蓝牙无线校准</li>
         </ul>
       </div>
     </div>
 
     <div class="pcard rv d3">
-      <div class="pcard-img" style="background: linear-gradient(135deg,#e6f0f8,#d0e4f0)">
+      <div class="pcard-img" style="background:linear-gradient(135deg,#e6f0f8,#d0e4f0)">
         <img src="images/kangen-k8.jpg" alt="LeveLuk KANGEN8 K8">
       </div>
       <div class="pcard-body">
         <p class="pcard-brand">Enagic® — Kangen Water®</p>
         <p class="pcard-model">LeveLuk K8</p>
-        <p class="pcard-sub">高性能水素水生成器（KANGEN8）</p>
+        <p class="pcard-sub">高性能水离子机（KANGEN8）</p>
         <ul class="pcard-feats">
-          <li>白金コーティングチタンプレート 8 枚搭載</li>
-          <li>Enagic 最強クラスの水電解能力</li>
-          <li>強力な抗酸化水を生成</li>
-          <li>飲料水・農業・美容など多目的に対応</li>
+          <li>搭载 8 块铂金涂层钛电极板</li>
+          <li>Enagic 旗舰级最强水离子机</li>
+          <li>高效生成富含抗氧化物的电解水</li>
+          <li>多用途：饮用水 / 农业 / 美容护肤</li>
         </ul>
       </div>
     </div>
@@ -443,41 +359,39 @@
   </div>
 </section>
 
-<!-- ─── PARTNERS ─── -->
 <section id="partners">
   <p class="sec-label">PARTNERS</p>
-  <h2 class="sec-h2" style="text-align:center">戦略的パートナー</h2>
+  <h2 class="sec-h2" style="text-align:center">战略合作伙伴</h2>
   <p class="sec-p" style="text-align:center;margin-left:auto;margin-right:auto">
-    国際的な一流ブランドとの緊密な協力関係を通じ、革新的で高品質な製品とソリューションをお客様に提供します。
+    精誠株式会社与多个国际知名品牌建立了紧密的战略合作关系，通过顶尖技术与品质，为客户提供创新解决方案。
   </p>
   <div class="partners-grid">
     <div class="ptnr rv">
       <div class="ptnr-name">Pyxis<span>®</span></div>
       <p class="ptnr-text">
-        Pyxis はインライン水質測定センサーの世界的リーダーです。PTSA トレーサー検出・酸化剤測定・pH など、幅広い水質パラメータに対応した高精度センサーを提供しています。精誠株式会社は Pyxis の正規代理店として、国内外の顧客に最先端の水質管理ソリューションを届けます。
+        Pyxis 是全球领先的内联水质检测传感器品牌，提供覆盖 PTSA 示踪剂检测、氧化剂测量、pH 等多种参数的高精度传感器。精誠株式会社作为 Pyxis 的授权经销商，将前沿水质管理解决方案带给国内外客户。
       </p>
     </div>
     <div class="ptnr rv d1">
       <div class="ptnr-name">Enagic<span>®</span></div>
       <p class="ptnr-text">
-        Enagic は「Kangen Water®」ブランドで世界に知られる、水電解技術のパイオニアです。医療グレードの水素水生成器を通じ、健康と環境への貢献を続けています。精誠株式会社は Enagic 製品の普及に取り組み、より多くの方に健康的な水の恩恵をお届けします。
+        Enagic 是水电解技术的先驱，以"Kangen Water®"品牌闻名全球，提供医疗级水素水（富氢水）生成设备，致力于健康与环保事业。精誠株式会社积极推广 Enagic 产品，让更多人享受健康好水带来的益处。
       </p>
     </div>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
 <section id="contact">
   <p class="sec-label">GET IN TOUCH</p>
-  <h2 class="sec-h2">お問い合わせ</h2>
-  <p class="sec-p">製品や取引に関するご質問・ご相談は、お気軽にご連絡ください。</p>
+  <h2 class="sec-h2">联系我们</h2>
+  <p class="sec-p">如有产品咨询或合作意向，欢迎随时与我们取得联系。</p>
   <div class="contact-grid">
     <div class="cinfo rv">
       <div class="citem">
         <div class="cico">📍</div>
         <div>
           <div class="clab">ADDRESS</div>
-          <div class="cval">〒557-0052<br>大阪府大阪市西成区潮路1丁目3番6号 606室<br>1-3-6 Shioji, Nishinari Ward, Osaka</div>
+          <div class="cval">〒557-0052<br>日本大阪府大阪市西成区潮路1丁目3番6号 606室<br>1-3-6 Shioji, Nishinari Ward, Osaka</div>
         </div>
       </div>
       <div class="citem">
@@ -508,16 +422,15 @@
     <div class="cmap rv d1">
       <iframe
         src="https://www.openstreetmap.org/export/embed.html?bbox=135.487%2C34.638%2C135.500%2C34.649&amp;layer=mapnik&amp;marker=34.6435%2C135.4937"
-        title="精誠株式会社 所在地" loading="lazy">
+        title="精誠株式会社 地址" loading="lazy">
       </iframe>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <div class="ft-logo">精誠株式会社</div>
-  <div class="ft-tag">誠信為本　価値共創</div>
+  <div class="ft-tag">诚信为本　价值共创</div>
   <div class="ft-copy">&copy; 2026 Seisei Kabushiki Gaisha. All rights reserved.</div>
 </footer>
 
