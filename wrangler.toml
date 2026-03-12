@@ -1,9 +1,4 @@
 # wrangler.toml
 name = 'jpseisei'
-main = "worker.js"
+pages_build_output_dir = "."
 compatibility_date = "2025-03-05"
-
-# 告诉 Wrangler 将 HTML 文件作为文本导入
-[[rules]]
-type = "Text"
-globs = ["**/*.html"]
