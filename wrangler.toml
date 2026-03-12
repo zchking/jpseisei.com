@@ -1,4 +1,8 @@
 # wrangler.toml
 name = 'jpseisei'
-pages_build_output_dir = "."
+main = "worker.js"
 compatibility_date = "2025-03-05"
+
+[assets]
+directory = "."
+binding = "ASSETS"
